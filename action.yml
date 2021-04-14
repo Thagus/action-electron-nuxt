@@ -1,0 +1,40 @@
+name: Electron Builder Action
+author: Samuel Meuli
+description: GitHub Action for building and releasing Electron apps
+
+inputs:
+  github_token:
+    description: GitHub authentication token
+    required: true
+  mac_certs:
+    description: Base64-encoded code signing certificate for macOS
+    required: false
+  mac_certs_password:
+    description: Password for decrypting `mac_certs`
+    required: false
+  release:
+    description: Whether the app should be released after a successful build
+    required: false
+    default: false
+  windows_certs:
+    description: Base64-encoded code signing certificate for Windows
+    required: false
+  windows_certs_password:
+    description: Password for decrypting `windows_certs`
+    required: false
+  package_root:
+    description: Directory where NPM/Yarn commands should be run
+    required: false
+    default: "."
+  args:
+    description: Other arguments to pass to the `electron-builder` command, e.g. configuration overrides
+    required: false
+    default: ""
+
+runs:
+  using: node12
+  main: index.js
+
+branding:
+  icon: upload-cloud
+  color: blue
