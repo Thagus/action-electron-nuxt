@@ -1,6 +1,6 @@
 {
 	"name": "action-electron-nuxt",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "GitHub Action for building and releasing electron-nuxt apps",
 	"author": {
 		"name": "Thagus Alcarin",
